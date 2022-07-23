@@ -64,13 +64,6 @@ model Token {
 //   RESET_PASSWORD
 // }
 
-model Project {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  name      String
-}
-
 model Player {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())

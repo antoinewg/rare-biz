@@ -1,5 +1,7 @@
-// import db from "./index"
+import db from "./index"
+import { Chance } from "chance"
 
+const chance = new Chance()
 /*
  * This seed function is executed when you run `blitz db seed`.
  *
@@ -7,9 +9,9 @@
  * to easily generate realistic data.
  */
 const seed = async () => {
-  // for (let i = 0; i < 5; i++) {
-  //   await db.project.create({ data: { name: "Project " + i } })
-  // }
+  for (let i = 0; i < 5; i++) {
+    await db.player.create({ data: { name: chance.name() } })
+  }
 }
 
 export default seed
