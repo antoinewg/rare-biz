@@ -58,7 +58,7 @@ export function renderHook(
 ) {
   if (!wrapper) {
     // Add a default context wrapper if one isn't supplied from the test
-    wrapper = ({ children }) => (
+    wrapper = ({ children }: { children: React.ReactNode }) => (
       <BlitzProvider dehydratedState={dehydratedState}>
         <RouterContext.Provider value={{ ...mockRouter, ...router }}>
           {children}
